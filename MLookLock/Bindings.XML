@@ -1,0 +1,11 @@
+<Bindings>
+	<Binding name="MLL_MOMENTARY" description="Momentary LookLock key - double click to toggle" header="MLOOKLOCK" runonup="true">
+		MLookLockChangeSettings("momentary",keystate)
+	</Binding>
+	<Binding name="MLL_ADDFRAME" description="Add Frame to Frame watch">
+		MLookLockChangeSettings("addframe",keystate)
+	</Binding>
+	<Binding name="MLL_DELFRAME" description="Delete Frame from Frame watch">
+		MLookLockChangeSettings("delframe",keystate)
+	</Binding>
+</Bindings>

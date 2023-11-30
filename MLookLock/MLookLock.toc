@@ -1,0 +1,6 @@
+## Interface: 20400
+## Title: MLookLock
+## Author: Mairelon
+## Notes: MLookLock sets up a simple perma-mouselook
+## SavedVariablesPerCharacter: MLookLockSavedData
+MLookLock.lua
