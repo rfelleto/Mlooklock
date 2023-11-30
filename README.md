@@ -6,6 +6,6 @@ I added a crosshair when Mouselooking is enabled for that first person feels.
 
 If anyone can help coding the following:
 - make the crosshair dissapear when rightclick and mouselooking is disabled
-- maybe override the walk forward with right click (don't know if this is possible in 11200) and make it target mouseover (don't think this is possible either) and we would have an elder scrolls worlf of warcraft. 
+- maybe override the walk forward with right click (don't know if this is possible in 11200) and make it target mouseover (don't think this is possible either) and we would have an elder scrolls world of warcraft. 
 
 I'm a noob at coding don't kill me >.<
