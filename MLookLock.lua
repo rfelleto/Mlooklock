@@ -91,20 +91,6 @@ function onevent(self, event, ...)
 	end
 end
 
-function onupdate(self, elapsed)
-	timer = timer - elapsed;
-	if timer < 0 then
-		local frame = checklist()
-		if (frame and not open) or (not frame and open) then
-			open = frame
-			checkframes()
-		end
-		timer = MLookLockSavedData.timer;
-	else
-		timer = timer - elapsed;
-	end
-end
-
 function setmouselook()
 	if mfd or mbd then 
 		return;
@@ -125,7 +111,7 @@ end
 function toggleenabled()
 	MLookLockSavedData.enabled = not MLookLockSavedData.enabled;
 	UIErrorsFrame:AddMessage("Mouse Look " .. ((MLookLockSavedData.enabled and "ON") or "OFF"), 1, 1, 0);
-	setmouselook();
+	setmouselook()
 end
 
 function MLookLockChangeSettings(mode, keystate)
@@ -180,22 +166,17 @@ function slashcmd(msg)
 	end;
 end
 
-local 	frame = CreateFrame("Frame");
+local 	frame = CreateFrame("Frame")
 		frame:RegisterEvent("PLAYER_LOGIN");
 		frame:SetScript("OnEvent", onevent);
-		frame:SetScript("OnUpdate", onupdate);
+		frame:SetScript("OnMouseDown", frame.OnMouseDown)
 
+
+		
 SlashCmdList["MLOOKLOCK_COMMAND"] = slashcmd
 SLASH_MLOOKLOCK_COMMAND1 = "/mll"
 
--- checkframes is triggered by Show and HideUIPanel - catching any thing that 
--- uses the WoW panel positioning system.
-hooksecurefunc("ShowUIPanel", function() checkframes() end);
-hooksecurefunc("HideUIPanel", function() checkframes() end);
 
--- Keep track of RMB/LMB up/down state
-hooksecurefunc("MoveForwardStart", function() mfd = true end);
-hooksecurefunc("MoveForwardStop", function() mfd = false setmouselook() end);
-hooksecurefunc("MoveBackwardStart", function() mbd = true end);
-hooksecurefunc("MoveBackwardStop", function() mbd = false setmouselook() end);
+
+
 
