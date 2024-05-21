@@ -5,3 +5,5 @@ Just bind a key to activate mouselook in the keybindings menu.
 I added a crosshair when Mouselooking is enabled for that first person feels.
 
 I'm a noob at coding don't kill me >.<
+
+![image](https://github.com/rfelleto/Mlooklock/assets/143844491/c8688bbc-fc0c-48ad-89f7-06a76cbb3426)
