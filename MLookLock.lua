@@ -43,6 +43,33 @@ function HideCrosshair()
     crosshairFrame:Hide()
 end
 
+local crosshairSize = 16
+local moving = false
+local oldX, oldY
+
+local function UpdateCrosshairSize()
+    if moving then
+        crosshairFrame:SetWidth(crosshairSize * 1.5)
+        crosshairFrame:SetHeight(crosshairSize * 1.5)
+    else
+        crosshairFrame:SetWidth(crosshairSize)
+        crosshairFrame:SetHeight(crosshairSize)
+    end
+end
+
+local function UpdateMovementState()
+    local x, y = GetPlayerMapPosition("player")
+    if x ~= oldX or y ~= oldY then
+        moving = true
+    else
+        moving = false
+    end
+    oldX, oldY = x, y
+    UpdateCrosshairSize()
+end
+
+crosshairFrame:SetScript("OnUpdate", UpdateMovementState)
+
 local 	enabled, mfd, mbd, mtd, open = true, nil, nil, nil, nil
 local 	onevent, onupdate, toggleenabled, setmouselook, checkframes, checklist, slashcmd
 local	lastclick, dclickdelay = GetTime(), .3
