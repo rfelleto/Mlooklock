@@ -8,7 +8,7 @@ I'm a noob at coding don't kill me >.<
 
 Update 05.21 - Crosshair now enlarges and shrinks if the character moves
 
-Version with no Crosshair: https://www.wowinterface.com/downloads/ ... kLock.html
+Version with no Crosshair: [https://www.wowinterface.com/downloads/ ... kLock.html](https://www.wowinterface.com/downloads/info9628-MLookLockMairelonsLookLock.html)
 
 ![image](https://github.com/rfelleto/Mlooklock/assets/143844491/c8688bbc-fc0c-48ad-89f7-06a76cbb3426)
 *With WarcraftIII UI: https://github.com/Fiurs-Hearth/WIIIUI
